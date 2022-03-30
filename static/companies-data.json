@@ -1,0 +1,62 @@
+[
+  {
+    "name": "ISG Germany GmbH",
+    "logo": "https://picsum.photos/100/100?q=1",
+    "city": "Frankfurt",
+    "specialties": ["Plumbing", "Electrical"]
+  },
+  {
+    "name": "HOCHTIEF Infrastructure GmbH Building Frankfurt",
+    "logo": "https://picsum.photos/100/100?q=2",
+    "city": "Frankfurt",
+    "specialties": ["Building"]
+  },
+  {
+    "name": "IC Bau GmbH",
+    "logo": "https://picsum.photos/100/100?q=3",
+    "city": "Essen",
+    "specialties": ["Excavation", "Plumbing", "Electrical"]
+  },
+  {
+    "name": "CSE Construction GmbH",
+    "logo": "https://picsum.photos/100/100?q=4",
+    "city": "Berlin",
+    "specialties": ["Excavation", "Plumbing", "Building"]
+  },
+  {
+    "name": "PBM Construction Germany GmbH",
+    "logo": "https://picsum.photos/100/100?q=5",
+    "city": "Berlin",
+    "specialties": ["Excavation", "Plumbing", "Building"]
+  },
+  {
+    "name": "Building Construction Logistics GmbH",
+    "logo": "https://picsum.photos/100/100?q=6",
+    "city": "Raunheim",
+    "specialties": ["Excavation", "Building"]
+  },
+  {
+    "name": "Mercury Frankfurt Office",
+    "logo": "https://picsum.photos/100/100?q=7",
+    "city": "Frankfurt",
+    "specialties": ["Excavation", "Plumbing", "Electrical", "Building"]
+  },
+  {
+    "name": "Fluor GmbH",
+    "logo": "https://picsum.photos/100/100?q=8",
+    "city": "Mannheim",
+    "specialties": ["Plumbing"]
+  },
+  {
+    "name": "Building Construction Logistics GmbH",
+    "logo": "https://picsum.photos/100/100?q=9",
+    "city": "München",
+    "specialties": ["Building"]
+  },
+  {
+    "name": "STRABAG International GmbH",
+    "logo": "https://picsum.photos/100/100?q=10",
+    "city": "Köln",
+    "specialties": ["Excavation", "Plumbing"]
+  }
+]
