@@ -1,0 +1,20 @@
+section.search-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-top: solid;
+  border-top-width: 3px;
+  background-color: #fff;
+  padding: 10px 2rem;
+  border-color: rgba(0, 0, 0, 0.1);
+  border-top-color: darkslateblue;
+}
+
+section.search-box input.company-name {
+  padding: 1em;
+  width: 80%;
+  background-color: rgba(248, 247, 247, 0.699);
+  border-radius: 5px;
+  font-size: 16px;
+}
