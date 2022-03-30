@@ -1,24 +1,58 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import "./App.css";
+import CompaniesList from "../src/components/CompaniesList";
+import CompaniesSearch from "../src/components/CompaniesSearch";
+import {
+  getAllCompanies,
+  getAllSpecialties,
+  filterCompanies,
+} from "./services/api";
 
 function App() {
+  const [companies, setCompanies] = useState([]);
+  const [specialties, setSpecialties] = useState([]);
+  const [searchResults, setSearchResults] = useState([]);
+
+  const fetchInitialData = async () => {
+    const [allCompanies, allSpecialties] = await Promise.all([
+      getAllCompanies(),
+      getAllSpecialties(),
+    ]);
+
+    setCompanies(allCompanies);
+    setSearchResults(allCompanies);
+    setSpecialties(allSpecialties);
+  };
+
+  const handleSearch = (searchParams) => {
+    const { companyName, specialtyName } = searchParams;
+
+    if (companyName || specialtyName) {
+      setSearchResults(
+        filterCompanies({ companyName, specialtyName }, companies)
+      );
+    } else {
+      setSearchResults(companies);
+    }
+  };
+
+  useEffect(() => fetchInitialData(), []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <>
+      <header>
+        <CompaniesSearch onSearch={handleSearch} specialties={specialties} />
       </header>
-    </div>
+      <main>
+        <section className="wrapper">
+          {searchResults.length ? (
+            <CompaniesList companies={searchResults} />
+          ) : (
+            <p>No results. Please try with different search params.</p>
+          )}
+        </section>
+      </main>
+    </>
   );
 }
 
